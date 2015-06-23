@@ -1,0 +1,49 @@
+{
+  "name": "grunt-CsvToL10nJson",
+  "description": "Grunt plugin to easily run CsvToL10nJson",
+  "version": "0.1.0",
+  "homepage": "https://github.com/endorama/grunt-CsvToL10nJson",
+  "private": true,
+  "author": {
+    "name": "Edoardo Tenani",
+    "email": "edoardo.tenani@gmail.com",
+    "url": "http://about.me/edoardo.tenani"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/endorama/grunt-CsvToL10nJson.git"
+  },
+  "bugs": {
+    "url": "https://github.com/endorama/grunt-CsvToL10nJson/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/endorama/grunt-CsvToL10nJson/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "grunt test",
+    "release": "node_modules/.bin/release-it"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-jshint": "^0.9.2",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "release-it": "0.0.15"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "gruntplugin"
+  ],
+  "dependencies": {
+    "CsvToL10nJson": "git://github.com/endorama/CsvToL10nJson.git",
+    "fs-extra": "^0.20.0"
+  }
+}
