@@ -31,19 +31,13 @@ module.exports = function(grunt) {
     // Configuration to be run (and then tested).
     CsvToL10nJson: {
       default_options: {
-        options: {
-        },
         files: {
           'tmp/default_options': 'test/fixtures/test.csv'
         }
       },
-      custom_options: {
-        options: {
-          separator: ': ',
-          punctuation: ' !!!'
-        },
+      multiple_files: {
         files: {
-          'tmp/custom_options': 'test/fixtures/test.csv'
+          'tmp/multiple_files': [ 'test/fixtures/test.csv', 'test/fixtures/test2.csv' ]
         }
       }
     },
@@ -61,11 +55,11 @@ module.exports = function(grunt) {
   // These plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-nodeunit');
+  // grunt.loadNpmTasks('grunt-contrib-nodeunit');
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
-  grunt.registerTask('test', ['clean', 'CsvToL10nJson', 'nodeunit']);
+  grunt.registerTask('test', ['clean', 'CsvToL10nJson']);
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['jshint', 'test']);
