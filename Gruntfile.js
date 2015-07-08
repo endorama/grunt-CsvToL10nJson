@@ -31,14 +31,23 @@ module.exports = function(grunt) {
     // Configuration to be run (and then tested).
     CsvToL10nJson: {
       default_options: {
-        files: {
-          'tmp/default_options': 'test/fixtures/test.csv'
-        }
+        src: 'test/fixtures/test.csv',
+        dest: 'tmp/default_options'
       },
       multiple_files: {
         files: {
           'tmp/multiple_files': [ 'test/fixtures/test.csv', 'test/fixtures/test2.csv' ]
         }
+      },
+      use_file_expand: {
+        files: [
+          {
+            expand: true,
+            cwd: 'test/fixtures',
+            src: [ '*.csv' ],
+            dest: 'tmp/use_file_expand',
+          }
+        ],
       }
     },
 
