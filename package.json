@@ -1,7 +1,7 @@
 {
   "name": "grunt-CsvToL10nJson",
   "description": "Grunt plugin to easily run CsvToL10nJson",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "homepage": "https://github.com/endorama/grunt-CsvToL10nJson",
   "private": true,
   "author": {
