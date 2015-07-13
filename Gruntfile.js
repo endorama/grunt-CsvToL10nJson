@@ -30,12 +30,6 @@ module.exports = function(grunt) {
 
     // Configuration to be run (and then tested).
     CsvToL10nJson: {
-      with_no_files: {
-        files: [{
-          expand: true,
-          src: 'this/file/does/not/exists.csv',
-        }]
-      },
       default_options: {
         src: 'test/fixtures/test.csv',
         dest: 'tmp/default_options'
@@ -54,7 +48,21 @@ module.exports = function(grunt) {
             dest: 'tmp/use_file_expand',
           }
         ],
-      }
+      },
+      without_prefix: {
+        options: {
+          usePrefix: false
+        },
+        src: 'test/fixtures/test.csv',
+        dest: 'tmp/default_options'
+      },
+      with_no_files: {
+        files: [{
+          expand: true,
+          src: 'this/file/does/not/exists.csv',
+        }]
+      },
+
     },
 
     // Unit tests.

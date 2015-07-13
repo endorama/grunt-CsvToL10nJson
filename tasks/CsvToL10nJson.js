@@ -19,8 +19,8 @@ module.exports = function(grunt) {
 
   grunt.registerMultiTask('CsvToL10nJson', 'Grunt plugin to easily run CsvToL10nJson', function() {
     // Merge task-specific and/or target-specific options with these defaults.
-    // var options = this.options({
-    // });
+    var options = this.options({
+    });
 
     var done = this.async();
 
@@ -45,7 +45,7 @@ module.exports = function(grunt) {
       fse.ensureDirSync(f.dest);
 
       f.src.forEach(function (src) {
-        csvToL10nJson(src, f.dest)
+        csvToL10nJson(src, f.dest, options)
         .then(function (files) {
           grunt.util._.forEach(files, function (dest) {
             grunt.log.writeln('File "' + dest + '" created.');
