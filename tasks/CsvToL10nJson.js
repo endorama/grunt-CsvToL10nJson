@@ -24,6 +24,12 @@ module.exports = function(grunt) {
 
     var done = this.async();
 
+    // if no files are passed to the task exit nicely
+    if (this.files.length === 0) {
+      grunt.log.writeln('No files passed to the task, skipping.');
+      done();
+    }
+
     this.files.forEach(function (f) {
 
       // if destination path ends with .csv

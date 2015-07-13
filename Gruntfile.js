@@ -30,6 +30,12 @@ module.exports = function(grunt) {
 
     // Configuration to be run (and then tested).
     CsvToL10nJson: {
+      with_no_files: {
+        files: [{
+          expand: true,
+          src: 'this/file/does/not/exists.csv',
+        }]
+      },
       default_options: {
         src: 'test/fixtures/test.csv',
         dest: 'tmp/default_options'
