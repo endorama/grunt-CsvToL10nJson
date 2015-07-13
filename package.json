@@ -43,7 +43,7 @@
     "gruntplugin"
   ],
   "dependencies": {
-    "CsvToL10nJson": "git://github.com/endorama/CsvToL10nJson.git",
+    "CsvToL10nJson": "git://github.com/endorama/CsvToL10nJson.git#v0.3.0",
     "fs-extra": "^0.20.0"
   }
 }
